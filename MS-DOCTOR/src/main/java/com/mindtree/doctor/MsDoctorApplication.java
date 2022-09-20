@@ -18,6 +18,5 @@ public class MsDoctorApplication {
 	RestTemplate restTemplate()
 	{ 
 		return new RestTemplate();
-	}
-	
+	}	
 }
