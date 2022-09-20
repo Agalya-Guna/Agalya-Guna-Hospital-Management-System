@@ -1,0 +1,31 @@
+input{
+    width: 200px
+
+}
+.container{
+    background-color: #fff;
+    margin-top: 50px;
+    height: 500px;
+}
+h1{
+    color:crimson;
+}
+th{
+    color: royalblue;
+}
+label{
+    color:purple;
+}
+button{
+    width: 100px;
+    background-image: linear-gradient(to right, #6253e1, #852D91,#F24645);
+    height: 50px;
+    border-radius: 10px;
+    color: #fff;
+}
+.btn{
+    background:crimson;
+    width:12vh;
+    margin-top: 10px;
+    color: #fff;
+}

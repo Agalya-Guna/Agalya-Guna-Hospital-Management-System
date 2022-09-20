@@ -1,0 +1,30 @@
+<div class="container">
+    <h1 style="text-align:center"><b><u>PATIENT INFORMATION</u></b></h1>
+    <label for="state" class="form-label"><b>Enter Patient Id:</b></label>
+    <div class="input-group">
+    <input type="text" class="form-control" id="id" placeholder="enter id" autocomplete="off"
+    [(ngModel)]="patient.id" name="pid" >
+    <button value="Go" (click)="onSubmit()">Go</button>
+    </div><hr>
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Date Of Visit</th>
+                <th>Prescrition</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td> {{patient.name}}</td>
+            <td> {{patient.age}}</td>
+            <td> {{patient.gender}}</td>
+            <td> {{patient.dateOfVisit}}</td>
+            <td> {{patient.prescription}}</td>
+            <input  type="submit" (click) ="update(patient.id)" class = "btn" value="Update">
+
+         </tbody>
+    </table><hr>
+    </div>

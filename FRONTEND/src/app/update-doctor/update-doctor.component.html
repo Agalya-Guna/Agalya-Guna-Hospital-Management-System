@@ -1,0 +1,75 @@
+<p>update-doctor works!</p>
+<div class="container">
+    <!-- <img src="https://cdn-icons-png.flaticon.com/128/7622/7622984.png" alt=""> -->
+      <form class="register-form" action="" (ngSubmit)="onSubmit()"  [formGroup]="doctorForm">
+  
+          <div>
+          <label for="name" class="form-label"><b>Enter Doctor Name :</b></label>
+          <div><input type="text" class="form-control" id="name" formControlName="name" placeholder="enter name" [(ngModel)]="doctor.name" autocomplete="off"></div> 
+          <div  *ngIf="submitted && f['name'].errors">
+              <div class="text-danger" *ngIf="f['name'].errors['required']">
+               Name is required
+             </div>
+             <div class="text-danger" *ngIf="f['name'].errors['pattern']">
+               Invalid Name
+             </div>
+           </div>
+          </div> 
+  
+          <div>
+          <label for="age" class="form-label"><b>Enter Doctor Age :</b></label>
+          <div><input type="text" class="form-control" id="age" formControlName="age" placeholder="enter age" [(ngModel)]="doctor.age" autocomplete="off"></div>
+          <div  *ngIf="submitted && f['age'].errors">
+              <div class="text-danger" *ngIf="f['age'].errors['required']">
+               Age is required
+             </div>
+             <div class="text-danger"*ngIf="f['age'].errors['pattern']">
+             Invalid Age
+             </div>
+           </div>
+          </div>
+  
+          <div>
+          <label for="gender" class="form-label"><b>Select Gender :</b></label>
+          <div></div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" formControlName="gender" id="male" value="Male" name="gender" [(ngModel)]="doctor.gender">
+              <label class="form-check-label" for="gender">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" formControlName="gender" id="female" value="Female" name="gender" [(ngModel)]="doctor.gender" >
+              <label class="form-check-label" for="gender">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" formControlName="gender" id="others" value="Others" name="gender" [(ngModel)]="doctor.gender">
+              <label class="form-check-label" for="gender">Others</label>
+            </div>
+            <div  *ngIf="submitted && f['gender'].errors">
+              <div class="text-danger"  *ngIf="f['gender'].errors['required']">
+               Please select Gender
+             </div>
+          </div>
+          </div>
+  
+            <div>
+            <label for="state" class="form-label"><b>Select Special Field :</b></label><br>
+            <select name="specialList"  formControlName="specialList" [(ngModel)]="doctor.specialList">
+                <option >--select--</option>
+                <option *ngFor="let fields of field" >{{fields.name}}</option>
+              </select>
+              <div   *ngIf="submitted && f['specialList'].errors">
+                  <div class="text-danger"  *ngIf="f['specialList'].errors['required']">
+                   Please select SpecialField
+                 </div>
+              </div>
+              </div><br>
+  
+              <div>
+                  <button>UPDATE</button>
+                  <button (click)="goBack()"><b>GO BACK</b></button>
+                </div><br>
+         
+      
+      </form>
+  </div>
+  

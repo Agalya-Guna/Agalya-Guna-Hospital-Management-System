@@ -1,0 +1,41 @@
+<div class="container">
+    <form class="register-form" action="" (ngSubmit)="onSubmit()" [formGroup]="adminForm"><br>
+        <br>
+        <img src="https://cdn-icons-png.flaticon.com/128/1000/1000946.png" alt=""><br><br>
+        <span class="head"><b>RECEPTION LOG-IN!</b></span><br><br>
+
+        <label for="state" class="form-label"><b>Enter Username:</b></label><br>
+        <div><input type="text" class="form-control" id="username" placeholder="Enter username" autocomplete="off"
+                formControlName="username" [(ngModel)]="username" name="pid">
+            <div *ngIf="submitted && f['username'].errors">
+                <div class="text-danger" *ngIf="f['username'].errors['required']">
+                    Username is required
+                </div>
+            </div>
+        </div><br>
+
+
+        <div>
+            <label for="state" class="form-label"><b>Enter Password :</b></label>
+            <div>
+
+                <input [type]="changetype?'password':'text'" placeholder="Enter your password"
+                    formControlName="password" [(ngModel)]="password">
+                <span class="eyeicon" (click)="viewPass()"><i [ngClass]="visible?'fa fa-eye':'fa fa-eye-slash'"></i>
+                </span>
+
+                <div *ngIf="submitted && f['password'].errors">
+                    <div class="text-danger" *ngIf="f['password'].errors['required']">
+                        Password is required
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+        <div>
+            <button class="btn btn-login" value="submit">Login</button>
+        </div><br>
+
+    </form>
+</div>

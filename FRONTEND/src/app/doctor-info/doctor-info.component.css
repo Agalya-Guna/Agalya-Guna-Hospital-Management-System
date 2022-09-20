@@ -1,0 +1,17 @@
+select{
+    width: 200px;
+}
+.container{
+    background-color: #fff;
+    margin-top: 50px;
+    height: 500px;
+}
+h1{
+    color:crimson;
+}
+th{
+    color: royalblue;
+}
+label{
+    color:purple;
+}

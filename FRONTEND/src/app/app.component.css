@@ -1,0 +1,51 @@
+.navbar{
+/* background: purple;
+ */
+ background-image: linear-gradient(to right, #6253e1, #852D91,#F24645);
+}
+img{
+    height:50px;
+    width: 80px;
+}
+.head{
+    font-size: 30px;
+    color:#fff;
+}
+.navbar-nav{
+   
+    /* margin-left:550px; */
+    position: absolute;
+    right: 35px;
+}
+.nav-item{
+    color:white;
+    margin-right: 20px;
+    font-size: 18px;
+}
+a{
+    color: #fff;
+}
+ul li ul.dropdown li{
+    display: block;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer; 
+    transition: top ease-in 0.3s;
+}
+ul li ul.dropdown{
+    width: 30%;
+    background:blue;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    
+}
+ul li a:hover{
+    background: #112C66;
+    cursor: pointer;
+    transition: top ease-in 0.3s; 
+
+}
+ul li:hover ul.dropdown{
+    display: block;
+}

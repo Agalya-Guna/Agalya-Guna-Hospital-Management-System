@@ -1,0 +1,105 @@
+<div class="container">
+    <h2><b>Update Details</b></h2>
+    <form class="register-form" action="" (ngSubmit)="onSubmit()" [formGroup]="patientForm">
+
+      <div>
+        <label for="name" class="form-label"><b>Enter Patient Name :</b></label>
+        <div><input type="text" class="form-control" id="name" placeholder="enter name" formControlName="name" autocomplete="off"
+            [(ngModel)]="patient.name" name="pname"></div>
+        <div *ngIf="submitted && f['name'].errors">
+          <div class="text-danger" *ngIf="f['name'].errors['required']">
+            Name is required
+          </div>
+          <div class="text-danger" *ngIf="f['name'].errors['pattern']">
+            Invalid Name
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <label for="age" class="form-label"><b>Patient Age :</b></label>
+        <div><input type="text" class="form-control" id="age" placeholder="enter age" formControlName="age"  autocomplete="off"
+            [(ngModel)]="patient.age" name="page"></div>
+        <div *ngIf="submitted && f['age'].errors">
+          <div class="text-danger" *ngIf="f['age'].errors['required']">
+            Age is required
+          </div>
+          <div class="text-danger" *ngIf="f['age'].errors['pattern']">
+            Invalid Age
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <label for="gender" class="form-label"><b>Select Patient Gender :</b></label>
+        <div></div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="male" value="Male" name="gender" formControlName="gender"
+            [(ngModel)]="patient.gender">
+          <label class="form-check-label" for="gender">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="female" value="Female" name="gender" formControlName="gender"
+            [(ngModel)]="patient.gender">
+          <label class="form-check-label" for="gender">Female</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="others" value="Others" name="gender" formControlName="gender"
+            [(ngModel)]="patient.gender">
+          <label class="form-check-label" for="gender">Others</label>
+        </div>
+        <div *ngIf="submitted && f['gender'].errors">
+          <div class="text-danger" *ngIf="f['gender'].errors['required']">
+            Please select Gender
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <label for="state" class="form-label"><b>Select Visited Doctor :</b></label><br>
+        <select name="visitedDoctor" [(ngModel)]="patient.visitedDoctor" formControlName="visitedDoctor">
+          <option>Select Doctor</option>
+          <option *ngFor="let visit of doc" value="{{visit.id}}">{{visit.name}}</option>
+        </select>
+        <div *ngIf="submitted && f['visitedDoctor'].errors">
+          <div class="text-danger" *ngIf="f['visitedDoctor'].errors['required']">
+            Please select SpecialField
+          </div>
+        </div>
+      </div>
+      <div> <label for="state" class="form-label"><b>Select Date of Visit :</b></label><br>
+        <input type="date" id="dateOfVisit"  [(ngModel)]="patient.dateOfVisit" formControlName="dateOfVisit">
+        <!-- <div class="input-group">
+          <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="patient.dateOfVisit" ngbDatepicker
+            #d="ngbDatepicker" formControlName="dateOfVisit">
+          <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i
+              class="fa fa-calendar"></i></button>
+        </div> -->
+        <div *ngIf="submitted && f['dateOfVisit'].errors">
+          <div class="text-danger" *ngIf="f['dateOfVisit'].errors['required']">
+            Please select Visited Date
+          </div>
+        </div>
+      </div>
+  
+  
+      <div>
+        <label for="name" class="form-label"><b>Enter Prescription details :</b></label>
+        <textarea class="form-control" rows="20" placeholder="Prescription Details" formControlName="prescription"
+          [(ngModel)]="patient.prescription" name="prescription"></textarea>
+        <div *ngIf="submitted && f['prescription'].errors">
+          <div class="text-danger" *ngIf="f['prescription'].errors['required']">
+            Please enter prescription
+          </div>
+        </div>
+      </div>
+  
+      <div><button><b>UPDATE</b></button>
+      <button (click)="goBack()"><b>GO BACK</b></button>
+      </div>
+  
+  
+  
+  
+    </form>
+  </div>

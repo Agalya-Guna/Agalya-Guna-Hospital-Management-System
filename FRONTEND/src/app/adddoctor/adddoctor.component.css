@@ -1,0 +1,30 @@
+select{
+    width: 200px;
+}
+.container{
+    width: 500px;
+    background-color: #fff;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    border-radius: 20px;
+}
+textarea{
+    height: 60px;
+}
+img{
+    height: 150px;
+    width: 150px;
+    margin-left: 35%;
+}
+label{
+    color:blue;
+}
+button{
+    background-image: linear-gradient(to right, #6253e1, #852D91,#F24645);
+    height: 40px;
+    width: 180px;
+    border-radius: 10px; 
+    margin-left: 35%;
+    color:#fff;
+    box-shadow: #852D91
+}

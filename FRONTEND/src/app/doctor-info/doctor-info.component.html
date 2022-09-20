@@ -1,0 +1,29 @@
+<div class="container">
+
+<h1 style="text-align:center"><b><u>DOCTOR INFORMATION</u></b></h1>
+
+<label for="state" class="form-label"><b>Select Doctor Name:</b></label>
+      <select name="visitedDoctor" [(ngModel)]="name" (change)="onSelect($event)">
+        <option >Select Doctor</option>
+        <option *ngFor="let visit of doc" value="{{visit.id}}">{{visit.name}}</option>
+      </select><hr>
+<div *ngIf="doctor.id>0"></div>  
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>GENDER</th>
+            <th>SPECIAL-FIELD</th>
+        </tr>
+    </thead>
+    <tbody>
+       <td>{{doctor.id}}</td>
+       <td>{{doctor.name}}</td>
+       <td>{{doctor.age}}</td>
+       <td>{{doctor.gender}}</td>
+       <td>{{doctor.specialList}}</td>
+    </tbody>
+</table><hr>
+</div>

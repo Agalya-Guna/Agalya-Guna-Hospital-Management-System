@@ -1,0 +1,25 @@
+.container{
+    background: #fff;
+    height: 500px;
+    align-items: center;
+}
+.end{
+    margin-left: 150vh;
+}
+.card3 {
+    background:#fff;
+    background-size: cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 30px;
+    height: 30px;
+    width: 1100px;
+    margin-top: 50px;
+    transition: top ease-in 0.3s;
+    align-items: center;
+    text-align: center;
+    color:crimson;
+  }
+  label{
+    color: blue;
+  }

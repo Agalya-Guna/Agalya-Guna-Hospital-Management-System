@@ -1,0 +1,40 @@
+input{
+    border-radius: 10px;
+    outline-color: #F24645;
+    height: 40px;
+    width: 50vh;
+ }
+ button{
+     background-image: linear-gradient(to right, #6253e1, #852D91,#F24645);
+     height: 40px;
+     width: 100px;
+     border-radius: 10px; 
+     margin-left: 35%;
+ }
+ img{
+     margin-left: 120px;
+ }
+ .container{
+     background-color:#fff;
+     width: 400px;
+     margin-top: 60px;
+     border-radius: 30px;
+  
+ }
+ 
+ .head{
+    font-family: sans-serif;
+    font-size: 26px;
+    color: purple;
+    margin-left: 60PX;
+}
+
+.eyeicon {
+    position: absolute;
+    right:82vh;
+    top:76vh;
+    
+    cursor: pointer; 
+    /* margin-left:80vh; */
+   
+}
